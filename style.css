@@ -1,0 +1,823 @@
+
+/* ==========================
+   CONFIGURACIÓN GENERAL
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff7fa;
+    color: #492338;
+    font-family: Georgia, serif;
+    overflow-x: hidden;
+}
+
+.oculto {
+    display: none !important;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* ==========================
+   FONDO Y CORAZONES
+========================== */
+
+.corazones-fondo {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.corazon-flotante {
+    position: absolute;
+    bottom: -40px;
+    color: #df91b1;
+    opacity: 0.6;
+    animation: flotar linear forwards;
+}
+
+@keyframes flotar {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ==========================
+   PORTADA
+========================== */
+
+.portada {
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #281322,
+        #59243f,
+        #9b496c
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    color: white;
+}
+
+.portada-contenido {
+    max-width: 650px;
+    animation: aparecer 1.5s ease;
+}
+
+.etiqueta {
+    color: #c47b9b;
+    font-size: 11px;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.portada .etiqueta {
+    color: #f5c4d8;
+}
+
+.corazon-principal {
+    font-size: 65px;
+    margin: 25px 0;
+    animation: latido 1.5s infinite;
+}
+
+.portada h1 {
+    font-size: clamp(42px, 8vw, 76px);
+    color: #ffe4ef;
+    margin-bottom: 25px;
+}
+
+.portada p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #f6dce8;
+    margin-bottom: 35px;
+}
+
+.portada small {
+    display: block;
+    margin-top: 35px;
+    color: #e8bbce;
+    font-style: italic;
+}
+
+/* ==========================
+   BOTONES
+========================== */
+
+.boton-principal {
+    background: #e9a9c2;
+    color: #481c35;
+    padding: 16px 28px;
+    border: none;
+    border-radius: 35px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px #36162925;
+}
+
+.boton-principal:hover {
+    background: #f8d0df;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px #36162935;
+}
+
+/* ==========================
+   CONTENIDO
+========================== */
+
+.contenido {
+    animation: aparecer 1s ease;
+}
+
+.seccion {
+    max-width: 950px;
+    margin: auto;
+    padding: 100px 25px;
+    text-align: center;
+}
+
+.seccion h2 {
+    font-size: clamp(30px, 5vw, 43px);
+    color: #713650;
+    margin-bottom: 25px;
+}
+
+.seccion > p {
+    color: #876477;
+    line-height: 1.8;
+    font-size: 17px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.inicio {
+    padding-top: 120px;
+    padding-bottom: 70px;
+}
+
+.inicio > p {
+    max-width: 650px;
+}
+
+.separador {
+    margin-top: 40px;
+    color: #d38aa9;
+    letter-spacing: 10px;
+    font-size: 22px;
+}
+
+/* ==========================
+   NAVEGACIÓN
+========================== */
+
+.navegacion {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #fff7faeF;
+    backdrop-filter: blur(12px);
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 3px 15px #57243b12;
+}
+
+.navegacion a {
+    color: #713650;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 18px;
+}
+
+.navegacion a:first-child {
+    font-weight: bold;
+}
+
+/* ==========================
+   CONTADOR
+========================== */
+
+.contador-seccion {
+    background: #f7e7ee;
+    max-width: 100%;
+    padding: 85px 20px;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.contador div {
+    background: white;
+    min-width: 115px;
+    padding: 25px 15px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #8a476018;
+}
+
+.contador strong {
+    display: block;
+    color: #a34d70;
+    font-size: 35px;
+}
+
+.contador span {
+    display: block;
+    color: #876477;
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+/* ==========================
+   LÍNEA DE TIEMPO
+========================== */
+
+.linea-tiempo {
+    max-width: 650px;
+    margin: 55px auto 0;
+    text-align: left;
+    border-left: 2px solid #e7b0c6;
+    padding-left: 35px;
+}
+
+.momento {
+    position: relative;
+    padding-bottom: 45px;
+}
+
+.punto {
+    position: absolute;
+    left: -44px;
+    top: 0;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #b65f84;
+    border: 4px solid #f5dce7;
+    box-sizing: content-box;
+}
+
+.momento span {
+    font-size: 12px;
+    color: #b65f84;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.momento h3 {
+    color: #713650;
+    font-size: 22px;
+    margin: 12px 0;
+}
+
+.momento p {
+    color: #876477;
+    line-height: 1.8;
+}
+
+/* ==========================
+   GALERÍA
+========================== */
+
+.texto-galeria {
+    margin-bottom: 40px !important;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.galeria figure {
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #7c40521b;
+    transition: 0.3s;
+}
+
+.galeria figure:hover {
+    transform: translateY(-7px) rotate(-1deg);
+}
+
+.galeria img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    border-radius: 7px;
+    background: #f1dce5;
+}
+
+.galeria figcaption {
+    padding: 15px 5px 8px;
+    color: #96516f;
+    font-style: italic;
+}
+
+/* ==========================
+   CARTA
+========================== */
+
+.carta-seccion {
+    background: #f7e7ee;
+    max-width: 100%;
+}
+
+.sobre {
+    max-width: 450px;
+    margin: 35px auto 0;
+    background: #fffafd;
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px #7c405220;
+}
+
+.sobre-icono {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    margin-bottom: 25px;
+    color: #876477;
+}
+
+.carta {
+    max-width: 650px;
+    margin: 30px auto 0;
+    background: #fffdf8;
+    padding: 40px;
+    text-align: left;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px #7c405220;
+    line-height: 2;
+    color: #624253;
+    animation: aparecer 0.8s ease;
+}
+
+.carta p {
+    margin-bottom: 20px;
+}
+
+.firma-carta {
+    text-align: right;
+    color: #a34d70;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* ==========================
+   SORPRESA FINAL
+========================== */
+
+.final-seccion {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.sorpresa {
+    max-width: 550px;
+    margin: 35px auto 0;
+    padding: 35px 20px;
+    border-radius: 20px;
+    background: #f7e7ee;
+    animation: aparecer 1s ease;
+}
+
+.sorpresa h3 {
+    color: #a34d70;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.sorpresa p {
+    color: #876477;
+    line-height: 1.8;
+}
+
+.lluvia-corazones {
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+/* ==========================
+   PIE DE PÁGINA
+========================== */
+
+footer {
+    background: #321629;
+    color: #f3d5e2;
+    text-align: center;
+    padding: 35px 20px;
+    line-height: 2;
+}
+
+footer span {
+    color: #e9a9c2;
+    font-size: 14px;
+}
+
+/* ==========================
+   ANIMACIONES
+========================== */
+
+@keyframes latido {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================
+   RESPONSIVE - CELULARES
+========================== */
+
+@media (max-width: 600px) {
+
+    .seccion {
+        padding: 75px 20px;
+    }
+
+    .navegacion {
+        padding: 16px 12px;
+        flex-direction: column;
+    }
+
+    .navegacion a {
+        font-size: 12px;
+        margin: 0 7px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria img {
+        height: 300px;
+    }
+
+    .contador {
+        gap: 12px;
+    }
+
+    .contador div {
+        min-width: 125px;
+    }
+
+    .carta {
+        padding: 25px;
+    }
+}
+
+/* ==========================
+   REPRODUCTOR ROMÁNTICO
+========================== */
+
+.reproductor-musica {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 260px;
+    padding: 14px;
+    border-radius: 18px;
+    background: rgba(50, 22, 41, 0.94);
+    border: 1px solid rgba(255, 210, 225, 0.25);
+    box-shadow: 0 8px 30px rgba(50, 22, 41, 0.25);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    color: white;
+}
+
+.info-musica {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.icono-musica {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e9a9c1, #a84d76);
+    color: white;
+    font-size: 25px;
+}
+
+.datos-musica {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 4px;
+}
+
+.datos-musica strong {
+    font-size: 13px;
+}
+
+.datos-musica span {
+    font-size: 11px;
+    color: #e9b9cc;
+}
+
+.boton-musica {
+    width: 37px;
+    height: 37px;
+    border: none;
+    border-radius: 50%;
+    background: #bd6d91;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton-musica:hover {
+    background: #df91b1;
+    transform: scale(1.08);
+}
+
+.ecualizador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    height: 16px;
+    margin-top: 10px;
+}
+
+.ecualizador span {
+    width: 3px;
+    height: 4px;
+    border-radius: 5px;
+    background: #e9a9c1;
+}
+
+.ecualizador.activo span {
+    animation: bailar 0.7s infinite ease-in-out alternate;
+}
+
+.ecualizador span:nth-child(2n) {
+    animation-delay: 0.2s;
+}
+
+.ecualizador span:nth-child(3n) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bailar {
+    from { height: 4px; }
+    to { height: 15px; }
+}
+
+@media (max-width: 600px) {
+    .reproductor-musica {
+        bottom: 15px;
+        right: 12px;
+        width: 235px;
+    }
+}
+
+
+/* ==========================
+   10 COSAS QUE AMO DE TI
+========================== */
+
+.razones-seccion {
+    text-align: center;
+}
+
+.texto-razones {
+    max-width: 600px;
+    margin: 15px auto 35px;
+}
+
+.tarjetas-razones {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 850px;
+    margin: 35px auto;
+}
+
+.tarjeta-razon {
+    height: 220px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    perspective: 1000px;
+    color: inherit;
+    font-family: inherit;
+    text-align: center;
+}
+
+.tarjeta-interior {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    transform-style: preserve-3d;
+}
+
+.tarjeta-razon.volteada .tarjeta-interior {
+    transform: rotateY(180deg);
+}
+
+.tarjeta-frente,
+.tarjeta-reverso {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 22px;
+    border-radius: 20px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    box-shadow: 0 8px 22px rgba(50, 22, 41, 0.12);
+}
+
+.tarjeta-frente {
+    background: linear-gradient(145deg, #fff0f5, #f4d8e4);
+    border: 1px solid #e9bfd0;
+    color: #71334f;
+}
+
+.numero-razon {
+    position: absolute;
+    top: 13px;
+    left: 17px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.corazon-razon {
+    font-size: 36px;
+    color: #b65c83;
+    margin-bottom: 12px;
+}
+
+.tarjeta-frente strong {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.tarjeta-frente small {
+    font-size: 12px;
+    opacity: 0.75;
+}
+
+.tarjeta-reverso {
+    background: linear-gradient(145deg, #6b304e, #321629);
+    color: #fff0f5;
+    transform: rotateY(180deg);
+    font-size: 15px;
+    line-height: 1.7;
+    border: 1px solid #a45b7c;
+}
+
+.tarjeta-razon:hover .tarjeta-frente {
+    box-shadow: 0 12px 28px rgba(169, 77, 118, 0.22);
+}
+
+.tarjeta-razon:focus-visible {
+    outline: 3px solid #bd6d91;
+    outline-offset: 5px;
+    border-radius: 20px;
+}
+
+.mensaje-final-razones {
+    max-width: 550px;
+    margin: 35px auto 10px;
+    font-style: italic;
+    color: #a94d76;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .tarjetas-razones {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        max-width: 340px;
+    }
+
+    .tarjeta-razon {
+        height: 200px;
+    }
+}
+
+
+/* ==========================
+   HOJA DE LA CARTA
+========================== */
+
+.carta {
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 15px;
+}
+
+.hoja-carta {
+    position: relative;
+    background: linear-gradient(145deg, #fffaf5, #fceaf0);
+    color: #633449;
+    padding: 45px 38px;
+    border-radius: 5px 5px 15px 5px;
+    border: 1px solid #e8c9d4;
+    box-shadow:
+        0 10px 25px rgba(50, 22, 41, 0.15),
+        inset 0 0 25px rgba(220, 170, 190, 0.12);
+    text-align: left;
+    line-height: 1.9;
+}
+
+.hoja-carta p {
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+
+.hoja-carta p:first-of-type {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.decoracion-carta {
+    text-align: center;
+    font-size: 30px;
+    color: #bd6d91;
+    margin-bottom: 18px;
+}
+
+.hoja-carta .firma-carta {
+    text-align: right;
+    color: #a94d76;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    .carta {
+        padding: 8px;
+    }
+
+    .hoja-carta {
+        padding: 30px 23px;
+    }
+
+    .hoja-carta p {
+        font-size: 14px;
+    }
+}
+
+/* Ocultar completamente la carta antes de abrirla */
+.carta.oculto {
+    display: none !important;
+}

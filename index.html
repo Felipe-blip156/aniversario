@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#321629">
+    <title>Nuestra historia ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- FONDO ANIMADO -->
+    <div class="corazones-fondo" id="corazonesFondo"></div>
+
+    <!-- BIENVENIDA -->
+    <section class="portada" id="portada">
+        <div class="portada-contenido">
+            <span class="etiqueta">UN AÑO DE NUESTRA HISTORIA</span>
+
+            <div class="corazon-principal">❤️</div>
+
+            <h1>365 días contigo</h1>
+
+            <p>
+                Hay historias que merecen ser contadas...
+                y esta es nuestra favorita.
+            </p>
+
+            <button class="boton-principal" id="botonInicio">
+                Descubrir nuestra historia
+                <span>♡</span>
+            </button>
+
+            <small>Hecho especialmente para ti</small>
+        </div>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contenido" class="contenido oculto">
+
+        <!-- REPRODUCTOR DE MÚSICA -->
+<div class="reproductor-musica">
+    <audio id="musica" loop>
+        <source src="musica/tu-y-yo.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="info-musica">
+        <div class="icono-musica">♫</div>
+
+        <div class="datos-musica">
+            <strong>Nuestra canción</strong>
+            <span>Tú y yo - La Misma Gente</span>
+        </div>
+
+        <button id="botonMusica" class="boton-musica" aria-label="Pausar música">
+            ⏸
+        </button>
+    </div>
+
+    <div class="ecualizador" id="ecualizador">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+        <span></span><span></span>
+    </div>
+</div>
+
+        <!-- PRESENTACIÓN -->
+        <section class="seccion inicio" id="inicio">
+            <span class="etiqueta">PARA LA PERSONA MÁS ESPECIAL</span>
+
+            <h2>Un año de nosotros</h2>
+
+            <p>
+                No sé cómo explicar todo lo bonito que ha sido
+                compartir este tiempo contigo.
+                Solo sé que cada momento a tu lado
+                se ha convertido en un recuerdo que quiero conservar.
+            </p>
+
+            <div class="separador">♡ ♡ ♡</div>
+        </section>
+
+        <!-- CONTADOR -->
+        <section class="seccion contador-seccion">
+            <h2>El tiempo que llevamos juntos</h2>
+
+            <p>Cada segundo contigo vale la pena.</p>
+
+            <div class="contador" id="contador">
+                <div>
+                    <strong id="dias">0</strong>
+                    <span>Días</span>
+                </div>
+
+                <div>
+                    <strong id="horas">0</strong>
+                    <span>Horas</span>
+                </div>
+
+                <div>
+                    <strong id="minutos">0</strong>
+                    <span>Minutos</span>
+                </div>
+
+                <div>
+                    <strong id="segundos">0</strong>
+                    <span>Segundos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- HISTORIA -->
+        <section class="seccion" id="historia">
+            <span class="etiqueta">NUESTRO CAMINO</span>
+
+            <h2>Así comenzó todo...</h2>
+
+            <div class="linea-tiempo">
+
+                <article class="momento">
+                    <div class="punto"></div>
+                    <span>2025/11/14</span>
+                    <h3>Cuando nos conocimos</h3>
+                    <p>
+                        Aquí comenzó una historia que ninguno
+                        de los dos imaginaba lo especial que sería.
+                    </p>
+                </article>
+
+                <article class="momento">
+                    <div class="punto"></div>
+                    <span>Un recuerdo especial</span>
+                    <h3>Nuestro primer momento</h3>
+                    <p>
+                        Un recuerdo que siempre voy a llevar
+                        conmigo el dia que me atrevi a
+                        pedirte ser mi novia amada.
+                    </p>
+                </article>
+
+                <article class="momento">
+                    <div class="punto"></div>
+                    <span>Unos dias despues...</span>
+                    <h3>Me demostraste que la felicidad existe</h3>
+                    <p>
+                        Y comenzo oficialmente nuestro
+                        primer capítulo juntos.
+                    </p>
+                </article>
+
+                <article class="momento">
+                    <div class="punto"></div>
+                    <span>Hoy</span>
+                    <h3>Nuestro primer aniversario</h3>
+                    <p>
+                        Un año de aprendizajes, cariño,
+                        momentos y muchísimas historias por vivir.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- GALERÍA -->
+        <section class="seccion" id="recuerdos">
+            <span class="etiqueta">PEQUEÑOS INSTANTES, GRANDES RECUERDOS</span>
+
+            <h2>Nuestros momentos ❤️</h2>
+
+            <p class="texto-galeria">
+                Algunas fotografías de nuestra historia.
+            </p>
+
+            <div class="galeria">
+                <figure>
+                    <img src="imagenes/foto1.jpg" alt="Nuestro recuerdo 1">
+                    <figcaption>Un momento especial ♡</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="imagenes/foto2.jpg" alt="Nuestro recuerdo 2">
+                    <figcaption>Contigo todo es mejor ♡</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="imagenes/foto3.jpg" alt="Nuestro recuerdo 3">
+                    <figcaption>Un recuerdo inolvidable ♡</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="imagenes/foto4.jpg" alt="Nuestro recuerdo 4">
+                    <figcaption>Y muchos más por vivir ♡</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        
+        <!-- 10 COSAS QUE AMO DE TI -->
+        <section class="seccion razones-seccion" id="razones">
+
+            <span class="etiqueta">DIEZ RAZONES, INFINITOS SENTIMIENTOS</span>
+
+            <h2>10 cosas que amo de ti ❤️</h2>
+
+            <p class="texto-razones">
+                Hay muchas más de diez, pero quiero que descubras algunas
+                de las razones por las que eres tan especial para mí.
+            </p>
+
+            <div class="tarjetas-razones">
+
+                <button class="tarjeta-razon" type="button">
+                    <span class="tarjeta-interior">
+                        <span class="tarjeta-frente">
+                            <span class="numero-razon">01</span>
+                            <span class="corazon-razon">♡</span>
+                            <strong>Tu sonrisa</strong>
+                            <small>Toca para descubrir</small>
+                        </span>
+                        <span class="tarjeta-reverso">
+                            Me encanta ver esos lindos huequitos que se forman en tus cachetes y que hacen que tu sonrisa sea tan especial.
+                        </span>
+                    </span>
+                </button>
+
+                <button class="tarjeta-razon" type="button">
+                    <span class="tarjeta-interior">
+                        <span class="tarjeta-frente">
+                            <span class="numero-razon">02</span>
+                            <span class="corazon-razon">♡</span>
+                            <strong>Tu forma de ser</strong>
+                            <small>Toca para descubrir</small>
+                        </span>
+                        <span class="tarjeta-reverso">
+                            Eres tan alegre que tienes esa capacidad de iluminar hasta mis días más difíciles.
+                        </span>
+                    </span>
+                </button>
+
+                <button class="tarjeta-razon" type="button">
+                    <span class="tarjeta-interior">
+                        <span class="tarjeta-frente">
+                            <span class="numero-razon">03</span>
+                            <span class="corazon-razon">♡</span>
+                            <strong>Lo que me haces sentir</strong>
+                            <small>Toca para descubrir</small>
+                        </span>
+                        <span class="tarjeta-reverso">
+                            Puedes provocar las sensaciones más bonitas con tan solo mirarme.
+                        </span>
+                    </span>
+                </button>
+
+                <button class="tarjeta-razon" type="button">
+                    <span class="tarjeta-interior">
+                        <span class="tarjeta-frente">
+                            <span class="numero-razon">04</span>
+                            <span class="corazon-razon">♡</span>
+                            <strong>Tu mirada</strong>
+                            <small>Toca para descubrir</small>
+                        </span>
+                        <span class="tarjeta-reverso">
+                            Cuando veo tus ojos, no puedo evitar imaginar el futuro más prometedor y bonito a tu lado.
+                        </span>
+                    </span>
+                </button>
+
+                <button class="tarjeta-razon" type="button">
+                    <span class="tarjeta-interior">
+                        <span class="tarjeta-frente">
+                            <span class="numero-razon">05</span>
+                            <span class="corazon-razon">♡</span>
+                            <strong>Tu apoyo</strong>
+                            <small>Toca para descubrir</small>
+                        </span>
+                        <span class="tarjeta-reverso">
+                            Siempre encuentras la manera de acompañarme en mis cosas y ayudarme a manejar esos momentos de estrés.
+                        </span>
+                    </span>
+                </button>
+
+                <button class="tarjeta-razon" type="button">
+                    <span class="tarjeta-interior">
+                        <span class="tarjeta-frente">
+                            <span class="numero-razon">06</span>
+                            <span class="corazon-razon">♡</span>
+                            <strong>Tu manera de quererme</strong>
+                            <small>Toca para descubrir</small>
+                        </span>
+                        <span class="tarjeta-reverso">
+                            Porque en tus pequeños detalles encuentro muchas razones para sentirme afortunado de tenerte en mi vida.
+                        </span>
+                    </span>
+                </button>
+
+                <button class="tarjeta-razon" type="button">
+                    <span class="tarjeta-interior">
+                        <span class="tarjeta-frente">
+                            <span class="numero-razon">07</span>
+                            <span class="corazon-razon">♡</span>
+                            <strong>Nuestras conversaciones</strong>
+                            <small>Toca para descubrir</small>
+                        </span>
+                        <span class="tarjeta-reverso">
+                            Porque contigo puedo hablar de cualquier cosa y hacer que hasta los momentos más sencillos sean especiales.
+                        </span>
+                    </span>
+                </button>
+
+                <button class="tarjeta-razon" type="button">
+                    <span class="tarjeta-interior">
+                        <span class="tarjeta-frente">
+                            <span class="numero-razon">08</span>
+                            <span class="corazon-razon">♡</span>
+                            <strong>Tu compañía</strong>
+                            <small>Toca para descubrir</small>
+                        </span>
+                        <span class="tarjeta-reverso">
+                            No importa lo que estemos haciendo, tenerte a mi lado hace que todo se sienta mucho mejor.
+                        </span>
+                    </span>
+                </button>
+
+                <button class="tarjeta-razon" type="button">
+                    <span class="tarjeta-interior">
+                        <span class="tarjeta-frente">
+                            <span class="numero-razon">09</span>
+                            <span class="corazon-razon">♡</span>
+                            <strong>La tranquilidad que me das</strong>
+                            <small>Toca para descubrir</small>
+                        </span>
+                        <span class="tarjeta-reverso">
+                            Incluso en los días complicados, saber que te tengo hace que todo sea un poquito más bonito.
+                        </span>
+                    </span>
+                </button>
+
+                <button class="tarjeta-razon" type="button">
+                    <span class="tarjeta-interior">
+                        <span class="tarjeta-frente">
+                            <span class="numero-razon">10</span>
+                            <span class="corazon-razon">♡</span>
+                            <strong>Nuestros sueños juntos</strong>
+                            <small>Toca para descubrir</small>
+                        </span>
+                        <span class="tarjeta-reverso">
+                            Me emociona pensar en todas las experiencias, aventuras y recuerdos que todavía nos esperan por vivir.
+                        </span>
+                    </span>
+                </button>
+
+            </div>
+
+            <p class="mensaje-final-razones">
+                Y aunque aquí solo hay diez razones, podría encontrar
+                miles más para seguir eligiéndote. ❤️
+            </p>
+
+        </section>
+
+        
+
+
+        <!-- CARTA -->
+        <section class="seccion carta-seccion" id="carta">
+            <span class="etiqueta">UNAS PALABRAS PARA TI</span>
+
+            <h2>Una carta de mi corazón</h2>
+
+            <div class="sobre" id="sobre">
+                <div class="sobre-icono">💌</div>
+                <p>Hay algo que quiero decirte...</p>
+
+                <button id="botonCarta" class="boton-principal">
+                    Abrir mi carta
+                </button>
+            </div>
+
+           
+<div class="carta" id="cartaAbierta" style="display: none;">
+
+    <div class="hoja-carta">
+        <div class="decoracion-carta">♡</div>
+
+        <p>Mi amor:</p>
+
+        <p>
+            Hoy celebramos nuestro primer año juntos
+            y quería regalarte algo diferente.
+        </p>
+
+        <p>
+            Gracias por cada sonrisa, cada conversación,
+            cada abrazo y cada instante que hemos compartido.
+            Me encanta tenerte en mi vida y poder construir
+            recuerdos contigo.
+        </p>
+
+        <p>
+            Este es apenas el primer capítulo de nuestra historia.
+            Espero que nos queden muchísimos más por escribir.
+        </p>
+
+        <p class="firma-carta">
+            Con todo mi cariño, para ti. ❤️
+        </p>
+    </div>
+
+</div>
+</section>
+
+
+        <!-- SORPRESA FINAL -->
+        <section class="seccion final-seccion">
+            <div class="corazon-principal">💗</div>
+
+            <h2>Y esto no termina aquí...</h2>
+
+            <p>
+                Tengo una última pregunta para ti.
+            </p>
+
+            <button id="botonSorpresa" class="boton-principal">
+                Descubrir sorpresa ✨
+            </button>
+
+            <div id="sorpresa" class="sorpresa oculto">
+                <h3>¿Volverías a elegirme? ❤️</h3>
+                <p>
+                    Porque yo volvería a elegirte
+                    en esta y en todas mis historias.
+                </p>
+                <div class="lluvia-corazones">💕 💗 💖 💞</div>
+            </div>
+        </section>
+
+        <!-- PIE DE PÁGINA -->
+        <footer>
+            <p>Hecho con amor, para la persona que hace especial mi vida.</p>
+            <span>❤️ Nuestro primer año ❤️</span>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
